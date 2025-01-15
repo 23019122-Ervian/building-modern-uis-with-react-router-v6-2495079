@@ -18,9 +18,10 @@ function App() {
           <Route path=":catId" element={<Category />} />
         </Route>
         <Route
-          path="*"
-          element={<h1 className="not-found">Page Not Found</h1>}
+          path="/"
+          element={<Home title = "Welcome to Red30 Tech" />}
         />
+        <Route path="categories" element={<Categories />} />
       </Routes>
 
       <footer className="container">
