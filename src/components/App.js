@@ -21,7 +21,6 @@ function App() {
           path="/"
           element={<Home title = "Welcome to Red30 Tech" />}
         />
-        <Route path="categories" element={<Categories />} />
       </Routes>
 
       <footer className="container">
