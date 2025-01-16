@@ -21,7 +21,6 @@ function App() {
           path="/"
           element={<Home title = "Home" />}
         />
-        <Route path="categories" element={<Categories />} />
       </Routes>
 
       <footer className="container">
