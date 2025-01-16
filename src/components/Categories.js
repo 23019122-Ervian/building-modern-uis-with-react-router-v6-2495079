@@ -1,22 +1,21 @@
 import { Outlet, NavLink } from "react-router-dom";
-import { getCategories } from "../api";
+import { getDiplomas } from "../api";
 
-export default function Categories() {
-  const categories = getCategories();
+export default function Diplomas() {
+  const diplomas = getDiplomas();
   return (
     <div className="container">
-      <h1>Session Categories</h1>
-
+      <h1>Diploma</h1>
       <ul className="categories">
-        {categories.map(cat => (
-          <li key={cat.id}>
+        {diplomas.map(diplomas => (
+          <li key={diplomas.id}>
             <NavLink
               className={({ isActive }) =>
                 isActive ? "category-active" : null
               }
-              to={cat.id}
+              to={diplomas.id}
             >
-              {cat.name}
+              {diplomas.name}
             </NavLink>
           </li>
         ))}

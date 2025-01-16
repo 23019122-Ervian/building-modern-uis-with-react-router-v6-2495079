@@ -1,21 +1,23 @@
 import { useParams } from "react-router-dom";
-import { getCategory } from "../api";
+import { getDiploma } from "../api";
 
 export default function Category() {
-  const { catId } = useParams();
-  const category = getCategory(catId);
+  const { diplomasId } = useParams();
+
+  const diploma = getDiploma({ id: diplomasId });
+
+  if (!diploma) {
+    return <div>Invalid diploma ID</div>;
+  }
 
   return (
     <>
-      <h2>{category.name} Sessions</h2>
-
+      <h2>{diploma.name} Modules</h2>
       <ul className="session-list">
-        {category?.sessions.map(session => (
-          <li className="session" key={session.id}>
-            <p className="session-name">{session.name}</p>
-            <p>
-              {session.speaker.name} | {session.speaker.org}
-            </p>
+        {diploma?.modules.map((module, index) => (
+          <li className="session" key={index}>
+            <p className="session-name">Module Code: {module.moduleCode}</p>
+            <p>Lecturer: {module.lecturer}</p>
           </li>
         ))}
       </ul>

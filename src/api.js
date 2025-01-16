@@ -1,230 +1,140 @@
-const categories = [
+const diplomas = [
   {
-    name: "3D Printing and Design",
-    id: "3d-printing-and-design",
+    name: "Financial Technology",
+    id: "financial-technology",
     sessions: [
       {
-        name: "3D Printing with Metal",
-        id: "3d-printing-metal",
-        desc: "See the latest in metal 3D printing technologies, from desktop machines (you need a really big desk!) to those designed for machine shops creating high-end and high-volume pieces.",
+        name: "Blockchain Basics",
+        id: "blockchain-basics",
+        desc: "An introduction to blockchain technology, its applications in finance, and how it is transforming the financial services industry.",
         speaker: {
-          name: "Geoff Leffler",
-          title: "Fabrication Specialist",
-          org: "KinetEco Inc.",
-          bio: "Geoff Leffler has metal in his veins. Starting out in traditional steel and aluminum fabrication, he's become obsessed with new technologies that can create finished metal parts quickly and affordably.",
+          name: "Alice Johnson",
+          title: "Blockchain Consultant",
+          org: "FinTech Innovations",
+          bio: "Alice Johnson has over a decade of experience in the financial sector and specializes in blockchain technology and its applications.",
         },
       },
       {
-        name: "Homebuilding and 3D Printing",
-        id: "homebuilding-and-3d-printing",
-        desc: "A new house in 24 hours—can this be our practical solution for making affordable housing for all? See what has been done in this very vertical industry, and discuss how it will grow and be truly affordable—both for those living in the homes, and for the builders that create them.",
+        name: "Digital Payments Revolution",
+        id: "digital-payments-revolution",
+        desc: "Explore the evolution of digital payments, the technologies behind them, and their impact on consumer behavior and business operations.",
         speaker: {
-          name: "Griffin Snow",
-          title: "Urban Planner",
-          org: "KinetEco Inc.",
-          bio: "Griffin Snow has been driven to find ways to make efficient, affordable housing for all ever since he was a kid living on the streets with his single dad.",
+          name: "Michael Smith",
+          title: "Payments Strategist",
+          org: "PayTech Solutions",
+          bio: "Michael Smith is a payments expert with a passion for understanding how digital payment systems are reshaping commerce.",
         },
       },
     ],
   },
   {
-    name: "AI and Robotics",
-    id: "ai-and-robotics",
+    name: "Information Technology",
+    id: "information-technology",
     sessions: [
       {
-        name: "Automating User Testing",
-        id: "automating-user-testing",
-        desc: "Eliminating human error and saving time and money are key reasons user testing—at least parts of it—is an ideal job for automation. We'll discuss the advantages and disadvantages of using machines to test a product that will be used by humans.",
+        name: "Cloud Computing Essentials",
+        id: "cloud-computing-essentials",
+        desc: "Learn the fundamentals of cloud computing, including service models, deployment strategies, and the benefits of cloud solutions.",
         speaker: {
-          name: "Ally Bode",
+          name: "Sarah Lee",
+          title: "Cloud Architect",
+          org: "TechCloud Inc.",
+          bio: "Sarah Lee has extensive experience in designing and implementing cloud solutions for various industries.",
+        },
+      },
+      {
+        name: "Cybersecurity Fundamentals",
+        id: "cybersecurity-fundamentals",
+        desc: "Understand the key concepts of cybersecurity, including threats, vulnerabilities, and best practices for protecting information systems.",
+        speaker: {
+          name: "David Kim",
+          title: "Cybersecurity Analyst",
+          org: "SecureTech",
+          bio: "David Kim is a cybersecurity professional dedicated to helping organizations safeguard their digital assets.",
+        },
+      },
+    ],
+  },
+  {
+    name: "Business Intelligence Systems",
+    id: "business-intelligence-systems",
+    sessions: [
+      {
+        name: "Data Visualization Techniques",
+        id: "data-visualization-techniques",
+        desc: "Explore various data visualization tools and techniques to effectively communicate insights and drive decision-making.",
+        speaker: {
+          name: "Emily Chen",
+          title: "Data Analyst",
+          org: "Insight Analytics",
+          bio: "Emily Chen specializes in data visualization and has helped numerous organizations turn data into actionable insights.",
+        },
+      },
+      {
+        name: "Predictive Analytics in Business",
+        id: "predictive-analytics-business",
+        desc: "Learn how predictive analytics can be used to forecast trends, improve decision-making, and enhance business performance.",
+        speaker: {
+          name: "James Brown",
+          title: "Business Intelligence Consultant",
+          org: "DataDriven Solutions",
+          bio: "James Brown has a strong background in data science and business intelligence, focusing on predictive modeling.",
+        },
+      },
+    ],
+  },
+  {
+    name: "Digital Design and Development",
+    id: "digital-design-development",
+    sessions: [
+      {
+        name: "User  Experience (UX) Design",
+        id: "ux-design",
+        desc: "Discover the principles of UX design and how to create user-centered digital products that enhance user satisfaction.",
+        speaker: {
+          name: "Laura White",
           title: "UX Designer",
-          org: "Globe Bank International",
-          bio: "Ally Bode believes in humans, and spends her time utilizing ai and robotics to make products more human-manageable.",
+          org: "Creative Digital Agency",
+          bio: "Laura White is a UX designer with a passion for creating intuitive and engaging user experiences.",
         },
       },
       {
-        name: "Security in the Age of AI",
-        id: "security-in-age-of-ai",
-        desc: "With security crises gaining in prevalence, it's more important than ever for us to make sure that our AI can't be hacked. How can we avoid all the data noise out there?",
+        name: "Web Development Fundamentals",
+        id: "web-development-fundamentals",
+        desc: "An introduction to web development, covering HTML, CSS, and JavaScript to build responsive and interactive websites.",
         speaker: {
-          name: "Daniel Rohan",
-          title: "Cyber Security Specialist",
-          org: "Hansel & Petal",
-          bio: "Daniel Rohan has been with Hansel & Petal for six years. His leadership in AI security is well-documented in his many articles for top security publications.",
-        },
-      },
-    ],
-  },
-  {
-    name: "Arts, Crafts, Fashion, and Fare",
-    id: "arts-crafts-fashion-fare",
-    sessions: [
-      {
-        name: "Ideas into Business",
-        id: "ideas-into-business",
-        desc: "From 3D printed jewelry to hand embroidery, epoxy river tables to boat making, many makers find that there is a market for what they create, and embark on a business. Meet successful makers who have turned their maker energy into successful enterprises.",
-        speaker: {
-          name: "Dixie Russel",
-          title: "Art Director",
-          org: "Red30 Design",
-          bio: "Dixie Russel has run a successful side business selling her paintings for the last seven years, and founded the local arts-makerspace in her neighborhood. We have no idea how she finds time to work for us, we're just glad she does.",
-        },
-      },
-      {
-        name: "Making Things from Other Things",
-        id: "making-things-from-other-things",
-        desc: "When you think 'maker', you don't usually think about olive oil. But olive oil's use has gone far beyond its role on the dinner table. This session shows and tells about artisanal creations that include olive oil and other usually-used-for-something-else ingredients, from soap to wood polish.",
-        speaker: {
-          name: "Anna Rossi",
-          title: "Product Development Specialist",
-          org: "Two Trees Olive Oil",
-          bio: "Anna Rossi's favorite part of her job is getting to invent things with people and companies from all over the world. She also heads up the annual customer maker contest, featuring people who make amazing things with Two Trees Olive Oil.",
+          name: "Mark Taylor",
+          title: "Web Developer",
+          org: "Web Solutions Co.",
+          bio: "Mark Taylor is a web developer with a knack for creating dynamic and user-friendly websites.",
         },
       },
     ],
   },
   {
-    name: "Community Service",
-    id: "community-service",
+    name: "Information Security Management",
+    id: "information-security-management",
     sessions: [
       {
-        name: "Community Service Event: Red30Cares ",
-        id: "red30-cares",
-        desc: "Join your fellow makers at our Annual Red30Cares community service event. Red30Cares work in concerted effort to improve the lives of others and to inspire community, activism, and philanthropy on a large scale",
+        name: "Risk Management in Information Security",
+        id: "risk-management-information-security",
+        desc: "Learn how to identify, assess, and manage risks in information security to protect organizational assets.",
         speaker: {
-          name: "Jenny Torres",
-          title: "Account Executive",
-          org: "Red30 Tech",
-          bio: "Jenny Torres likes to tell others that there is literally a maker or two inside of her since she has spent most of her life morbidly obese due to a rare medical condition. She credits the maker community with giving her the confidence and courage to create.",
-        },
-      },
-    ],
-  },
-  {
-    name: "Education and Training",
-    id: "education-and-training",
-    sessions: [
-      {
-        name: "The End Product is Human",
-        id: "end-product-is-human",
-        desc: "The aspects of the learning experience continually changes, and has been forced to take some giant leaps in this past year. Learn how to develop new technology and experiences while keeping in mind that the end “product” is a human that is counting on you to learn.",
-        speaker: {
-          name: "Aran Nguyen",
-          title: "LEX Designer",
-          org: "Binaryville",
-          bio: "Aran Nguyen is widely known as a champion of accessible education, receiving awards for ingenuity in online learning for students with special needs.",
+          name: "Nina Patel",
+          title: "Information Security Manager ",
+          org: "SecureGuard",
+          bio: "Nina Patel has over 15 years of experience in information security and specializes in risk management and compliance.",
         },
       },
       {
-        name: "Hands-On Hacks",
-        id: "hands-on-hacks",
-        desc: "Join your fellow makers in learning their favorite hacks in popular maker categories.",
+        name: "Incident Response Planning",
+        id: "incident-response-planning",
+        desc: "Understand the importance of incident response planning and how to develop effective strategies to respond to security breaches.",
         speaker: {
-          name: "Gwen Fabler",
-          title: "President",
-          org: "Fabler Innovations",
-          bio: "Gwen Fabler is a maker hack geek, or so she says, and loves collecting and distributing crowdsourced maker information.",
-        },
-      },
-    ],
-  },
-  {
-    name: "Entertainment",
-    id: "entertainment",
-    sessions: [
-      {
-        name: "Experience Makers Festival",
-        id: "experience-makers-festival",
-        desc: "While composed music has long been considered an art, sound is still considered more of a technical skill than an art. As a broadcast engineer, Beverley has been an advocate for sound to be treated as an art, with the BE conducting the blend of voice, music, background noise, and sound effects to create content that greatly enhances the visual aspects of a broadcast.",
-        speaker: {
-          name: "Beverley Armstrong",
-          title: "Broadcast Engineer",
-          org: "Red30 Design",
-          bio: "While Beverley Armstrong is known as a tech head, she also has a secret musical side playing Viennese oboe and other woodwinds.",
-        },
-      },
-    ],
-  },
-  {
-    name: "Ethics and Environment",
-    id: "ethics-and-environment",
-    sessions: [
-      {
-        name: "The Solar Bowler",
-        id: "solar-bowler",
-        desc: "Meet the makers of The Solar Bowler, a fictional character that uses unique and sustainable ways to power his favorite pastime.",
-        speaker: {
-          name: "Aksh Khatri",
-          title: "Controls System Lead",
-          org: "KinetEco Inc.",
-          bio: "Aksh Kahatri balances his serious job with another serious job: Keeping The Solar Bowler busy creating new ways to power his bowling alley.",
-        },
-      },
-      {
-        name: "Managing Virtual Teams",
-        id: "managing-virtual-teams",
-        desc: "How do you keep your team invested in projects if they are all or partly remote? What are your biggest challenges and the best tools to meet those challenges? Join these managers in a roundtable discussion as they share the tools and methodologies that work for them.",
-        speaker: {
-          name: "Ashley Hackett",
-          title: "Chief Innovation Officer",
-          org: "The Landon Hotel",
-          bio: 'Ashley Hackett calls herself a "permanently remote" employee as part of the executive team that manages a worldwide accommodation business.',
-        },
-      },
-    ],
-  },
-  {
-    name: "Keynote",
-    id: "keynote",
-    sessions: [
-      {
-        name: "We are All Makers",
-        id: "we-are-all-makers",
-        desc: "There is a maker inside of each of us—and some get out more often than others. From innovating a way to make a job easier, to renovating a tired chest of drawers into a piece of statement home decor, bits of maker make it into our days on a regular basis. Here's how to embrace and encourage that maker in everyone around us.",
-        speaker: {
-          name: "Jenny Torres",
-          title: "Account Executive",
-          org: "Red30 Tech",
-          bio: "Jenny Torres likes to tell others that there is literally a maker or two inside of her since she has spent most of her life morbidly obese due to a rare medical condition. She credits the maker community with giving her the confidence and courage to create.",
-        },
-      },
-      {
-        name: "Making a Maker Community",
-        id: "making-a-maker-community",
-        desc: "One of the things we hear most often is that the favorite part of a makerspace is being able to socialize with other people interested in the same things you are, and learning about areas of making that you want to learn about. How do we build and nurture this community?",
-        speaker: {
-          name: "Milia Wu",
-          title: "Director of Special Projects",
-          org: "City of Orange Valley",
-          bio: "Milia Wu thinks all of her projects are special, especially the one in which she actively interacts with people in local makerspaces, and talks to the community about taking advantage of these spaces. Her ultimate goal is to help more women and seniors get involved.",
-        },
-      },
-    ],
-  },
-  {
-    name: "Virtual and Augmented Reality",
-    id: "virtual-and-augmented-reality",
-    sessions: [
-      {
-        name: "Augmented Real(ity) Estate",
-        id: "ar-estate",
-        desc: "Imagine if your company is moving you to a state too far away to spend time looking for a new place to live. Wouldn't it be nice to be able to meet an agent, walk through a house, open doors, go up steps, and check out the neighborhood from the comfort of your couch? Check out the latest innovations in augmented reality in the real estate market, and discuss its economic benefits.",
-        speaker: {
-          name: "Grant Jacobson",
-          title: "Owner",
-          org: "Grant Creative Solutions",
-          bio: "Grant Jacobson has been creating virtual walkthroughs for real estate clients for years, so it only makes sense for him to become an augmented reality go-to creative. About 40 percent of his clients use Grant's proprietary augmented reality services.",
-        },
-      },
-      {
-        name: "VR in Town and City Planning",
-        id: "vr-town-and-city-planning",
-        desc: "The City of Orange Valley is one of the first in the state to embrace the use of VR in its town planning. Panelists share examples of zoning request mockups, a proposed development, and other infrastructure proposals and plans that help both citizens and developers envision and edit prior to implementation.",
-        speaker: {
-          name: "Victor Gonzalez",
-          title: "Wastewater Management Specialist",
-          org: "Leaf & Mortar",
-          bio: "Victor Gonzalez has worked tirelessly in helping organizations design and model systems that bring normally 'hidden' infrastructures—such as the wastewater management systems he designs and implements—to life using virtual reality.",
+          name: "Tom Harris",
+          title: "Incident Response Specialist",
+          org: "CyberSafe Solutions",
+          bio: "Tom Harris is an expert in incident response and has helped organizations prepare for and recover from security incidents.",
         },
       },
     ],
@@ -232,15 +142,16 @@ const categories = [
 ];
 
 export function getSession({ sessionId, catId }) {
-  return categories
+  return diplomas
     .find(({ id }) => id === catId)
     .sessions.find(({ id }) => id === sessionId);
 }
 
-export function getCategory(catId) {
-  return categories.find(({ id }) => id === catId);
+export function getDiploma(diplomasId) {
+  const diploma = diplomas.find(({ id }) => id === diplomasId);
+  return diploma;
 }
 
-export function getCategories() {
-  return categories.map(({ name, id }) => ({ name, id }));
+export function getDiplomas() {
+  return diplomas.map(({ name, id }) => ({ name, id }));
 }
